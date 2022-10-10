@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Righteous, "Helvetica Neue", sans-serif; }
+
+
+.mouse-click {
+  cursor: pointer;
+}
+
+.mouseclick{
+  cursor: pointer;
+}
+
+
+.bg-custom-primary{
+  background-color: #0b8ad9;
+}
+
+.bg-custom-secondary{
+  background-color: #053259;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
