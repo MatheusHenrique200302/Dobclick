@@ -10,7 +10,7 @@
           </h1>
 
           <div class="card-body pb-0 mb-0">
-            <form class="form">
+            <form [formGroup]="form" class="form">
               <div class="row">
                 <div class="form-group col-11">
 
@@ -19,7 +19,7 @@
                   </label>
 
 
-                  <input name="email" type="email" required class="form-control rounded" />
+                  <input name="email" formControlName="email"  type="email" required class="form-control rounded" />
                   <!-- {errors.email && <p class="text-danger">{errors.email.message}</p>} -->
 
                 </div>
@@ -27,14 +27,10 @@
               <div class="row">
                 <div class="form-group col-11">
 
-
                   <label class="py-1 pe-5 " htmlFor="senha">
                     Senha:
                   </label>
-
-
-                  <input class="form-control rounded" required />
-
+                  <input class="form-control rounded" formControlName="senha"  required />
 
                 </div>
                 <div class="form-group  col-1">

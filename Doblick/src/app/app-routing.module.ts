@@ -1,3 +1,4 @@
+import { EstoqueComponent } from './pages/estoque/estoque.component';
 import { LoginComponent } from './pages/login/login.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { NgModule } from '@angular/core';
@@ -12,6 +13,10 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent
+  },
+  {
+    path: 'estoque',
+    component: EstoqueComponent
   }
 ];
 

@@ -1,9 +1,102 @@
 <AppLayout>
-
   <div class="mt-4 ms-4">
     <h2>Home</h2>
-    <h6>Seja Bem-vindo(a) usuarioName ! </h6>
+    <h6>Seja Bem-vindo(a) usuarioName !</h6>
   </div>
 
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6 col-lg-6 col-sm-12">
+        <mat-card class="shadow-lg" style="height: 400px" *ngIf="!isLoading">
+          <mat-card-content>
+            <div *ngIf="!isLoading">
+              <apx-chart
+                [series]="GraficoSemana.series"
+                [xaxis]="GraficoSemana.options.xaxis"
+                [chart]="GraficoSemana.options.chart"
+              ></apx-chart>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      <div class="col-md-6 col-lg-6 col-sm-12">
+        <mat-card class="shadow-lg" style="height: 400px" *ngIf="!isLoading">
+          <mat-card-content>
+            <div class="w-100" *ngIf="!isLoading">
+              <span class="d-flex justify-content-center align-content-center">
+                <strong> Estoque Critico </strong>
+              </span>
+              <div class="d-flex justify-content-center pt-2">
+                <div class="progress-spinner-badge">
+                  <div class="col-12 text-center">
+                    <strong> descricao </strong>
+                  </div>
+                  <div class="col-12 text-center">
+                    <strong> UN </strong>
+                  </div>
+                  <div class="col-12 text-center">
+                    <strong> % do estoque </strong>
+                  </div>
+                </div>
+                <mat-progress-spinner
+                  mode="determinate"
+                  [diameter]="300"
+                  [value]="100"
+                  color="primary"
+                >
+                </mat-progress-spinner>
+              </div>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
 
+    <div class="row mt-2">
+      <div class="col-md-6 col-lg-6 col-sm-12">
+        <mat-card class="shadow-lg" style="height: 400px" *ngIf="!isLoading">
+          <mat-card-content>
+            <div *ngIf="!isLoading">
+              <apx-chart
+                [series]="GraficoDeLinha.series"
+                [xaxis]="GraficoDeLinha.options.xaxis"
+                [chart]="GraficoDeLinha.options"
+              ></apx-chart>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      <div class="col-md-6 col-lg-6 col-sm-12">
+        <mat-card class="shadow-lg" style="height: 400px" *ngIf="!isLoading">
+          <mat-card-content>
+            <div class="w-100" *ngIf="!isLoading">
+              <span class="d-flex justify-content-center align-content-center">
+                <strong> Atenção </strong>
+              </span>
+              <div class="d-flex justify-content-center pt-2">
+                <div class="progress-spinner-badge">
+                  <div class="col-12 text-center">
+                    <strong> descricao </strong>
+                  </div>
+                  <div class="col-12 text-center">
+                    <strong> UN </strong>
+                  </div>
+                  <div class="col-12 text-center">
+                    <strong> % do estoque </strong>
+                  </div>
+                </div>
+                <mat-progress-spinner
+                  mode="determinate"
+                  [diameter]="300"
+                  [value]="100"
+                  color="accent"
+                >
+                </mat-progress-spinner>
+              </div>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
 </AppLayout>

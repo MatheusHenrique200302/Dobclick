@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DataTablesModule } from "angular-datatables";
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule,
     FormsModule,
     PagesModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    DataTablesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

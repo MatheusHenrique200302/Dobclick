@@ -8,9 +8,24 @@
     </mat-toolbar>
     <mat-divider style="background-color: white ;"></mat-divider>
     <mat-nav-list>
-      <a class="text-white" mat-list-item href="#">Link 1</a>
-      <a class="text-white" mat-list-item href="#">Link 2</a>
-      <a class="text-white" mat-list-item href="#">Link 3</a>
+      <a class="text-white" mat-list-item>
+        <div class=" d-flex justify-content-between w-100">
+          <span>Home</span>
+          <fa-icon [icon]="faDashboard"></fa-icon>
+        </div>
+      </a>
+      <a [routerLink]="['/estoque']" class="text-white" mat-list-item>
+        <div class=" d-flex justify-content-between w-100">
+          <span>Estoque</span>
+          <fa-icon [icon]="faBoxArchive"></fa-icon>
+        </div>
+      </a>
+      <a class="text-white" mat-list-item>
+        <div class=" d-flex justify-content-between w-100">
+          <span>Vendas</span>
+          <fa-icon [icon]="faChartLine"></fa-icon>
+        </div>
+      </a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
